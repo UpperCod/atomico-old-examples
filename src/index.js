@@ -1,10 +1,18 @@
 import Element from "@atomico/element";
 import { h, useReducer } from "@atomico/core";
-import { useRoute, useRedirect, Router } from "@atomico/router";
+import {
+	useRoute,
+	useRedirect,
+	Router,
+	options,
+	useParentPath
+} from "@atomico/router";
 import Button from "./components/Button";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { reducer, Actions } from "./reducer";
+
+options.setRootDefault(location.pathname);
 
 let defaultProducts = [
 	{ id: "p1", title: "Gaming Mouse", price: 29.99 },
@@ -25,10 +33,11 @@ function formatMapCart(cart) {
 class AtomicoShop extends Element {
 	render({ products = defaultProducts }) {
 		let redirect = useRedirect();
-		let [inRoot] = useRoute("/example-shop");
-		let [inCart] = useRoute("/example-shop/cart");
+		let [inRoot] = useRoute("/");
+		let [inCart] = useRoute("/cart");
 		let [cart, dispatch] = useReducer(reducer, new Map());
 
+		console.log(useParentPath());
 		cart = formatMapCart(cart);
 
 		return (
@@ -56,13 +65,10 @@ class AtomicoShop extends Element {
 				}
 				`}</style>
 				<header id="header">
-					<Button onClick={() => redirect("/example-shop")} checked={inRoot}>
+					<Button onClick={() => redirect("/")} checked={inRoot}>
 						Products
 					</Button>
-					<Button
-						onClick={() => redirect("/example-shop/cart")}
-						checked={inCart}
-					>
+					<Button onClick={() => redirect("/cart")} checked={inCart}>
 						Cart ({cart.length})
 					</Button>
 				</header>

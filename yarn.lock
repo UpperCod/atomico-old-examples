@@ -17,10 +17,10 @@
   resolved "https://registry.yarnpkg.com/@atomico/hostcss/-/hostcss-0.2.2.tgz#8717ac9e23ec492bbdbbff24a8b41de42f77a553"
   integrity sha512-z8zDcXanashFM2+Kaejs+2obs77Gr6OvZSdlW1y3u0mMe28SZIuul5hIDK4aZg9b7S+Pug7Zyk811zkIK4d+cQ==
 
-"@atomico/router@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@atomico/router/-/router-0.1.0.tgz#45db644a6b194c567957969b8f8338ef92a2cfa2"
-  integrity sha512-FrfLjg90o3cKUcyG7ObEwYTJJ9+FVoNFiVcJFGNKsnyuIAcXxaTSuPC/bMzNd9p2un+KRlV8QtArWmtZmDwADw==
+"@atomico/router@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@atomico/router/-/router-0.1.1.tgz#d7d9bf2ed353035443c2e0ee8558efe4a8c58067"
+  integrity sha512-P0aEnlDux+LUL3rVQzbpWdo8uGG+UXe2/8HLbyxDS0TW/xsyzTDNCivdHT4/V+H/4Hxh/KRYsEK5hH/1ZdJbIQ==
 
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
