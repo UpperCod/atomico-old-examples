@@ -37,7 +37,6 @@ class AtomicoShop extends Element {
 		let [inCart] = useRoute("/cart");
 		let [cart, dispatch] = useReducer(reducer, new Map());
 
-		console.log(useParentPath());
 		cart = formatMapCart(cart);
 
 		return (
