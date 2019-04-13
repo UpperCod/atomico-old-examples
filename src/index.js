@@ -25,8 +25,8 @@ function formatMapCart(cart) {
 class AtomicoShop extends Element {
 	render({ products = defaultProducts }) {
 		let redirect = useRedirect();
-		let [inRoot] = useRoute("/");
-		let [inCart] = useRoute("/cart");
+		let [inRoot] = useRoute("/example-shop");
+		let [inCart] = useRoute("/example-shop/cart");
 		let [cart, dispatch] = useReducer(reducer, new Map());
 
 		cart = formatMapCart(cart);
@@ -56,10 +56,13 @@ class AtomicoShop extends Element {
 				}
 				`}</style>
 				<header id="header">
-					<Button onClick={() => redirect("/")} checked={inRoot}>
+					<Button onClick={() => redirect("/example-shop")} checked={inRoot}>
 						Products
 					</Button>
-					<Button onClick={() => redirect("/cart")} checked={inCart}>
+					<Button
+						onClick={() => redirect("/example-shop/cart")}
+						checked={inCart}
+					>
 						Cart ({cart.length})
 					</Button>
 				</header>
