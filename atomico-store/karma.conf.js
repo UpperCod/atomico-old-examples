@@ -1,18 +1,17 @@
 /**
- * @link https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai
  * @link https://www.npmjs.com/package/karma-rollup-preprocessor
  */
 module.exports = function(config) {
 	config.set({
-		frameworks: ["mocha", "chai"],
+		frameworks: ["jasmine"],
 		files: [
 			{
-				pattern: "test/**/*.js",
+				pattern: "test/**/*.test.js",
 				watched: true
 			}
 		],
 		preprocessors: {
-			"test/**/*.js": ["rollup"]
+			"test/**/*.test.js": ["rollup"]
 		},
 		rollupPreprocessor: {
 			plugins: [
@@ -35,10 +34,10 @@ module.exports = function(config) {
 				sourcemap: "inline" // Sensible for testing.
 			}
 		},
-		reporters: ["progress"],
+		reporters: ["spec"],
 		port: 9876, // karma web server port
 		colors: true,
-		logLevel: config.LOG_INFO,
+		logLevel: config.LOG_ERROR,
 		browsers: ["ChromeHeadless"],
 		autoWatch: false,
 		// singleRun: false, // Karma captures browsers, runs the tests and exits
