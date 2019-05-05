@@ -26,7 +26,7 @@ function App({ products }) {
 			<AtomicoStoreHeader>
 				<AtomicoStoreButton
 					onClick={() => redirect("/")}
-					checked={params.page == "products"}
+					checked={params.page == null}
 				>
 					Products
 				</AtomicoStoreButton>
