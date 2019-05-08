@@ -7,10 +7,10 @@ import AtomicoStoreButton from "./components/atomico-store-button";
 import Products from "./pages/products";
 import Cart from "./pages/cart";
 
-function App({ products }) {
+function AtomicoStore({ products, location }) {
 	let [cart, dispatch] = useReducer(reducer, []);
 	let redirect = useRedirect();
-	let [inRoute, params] = useRoute("/:page/:any...");
+	let [inRoute, params] = useRoute(`${location}/:page/:any...`);
 	return (
 		<host shadowDom>
 			<style>
@@ -25,14 +25,14 @@ function App({ products }) {
 			</style>
 			<AtomicoStoreHeader>
 				<AtomicoStoreButton
-					onClick={() => redirect("/")}
+					onClick={() => redirect(location)}
 					checked={params.page == null}
 				>
 					Products
 				</AtomicoStoreButton>
 				<AtomicoStoreButton
 					counter={cart.reduce((total, { count }) => total + count, 0)}
-					onClick={() => redirect("/cart")}
+					onClick={() => redirect(`${location}/cart`)}
 					checked={params.page == "cart"}
 				>
 					Cart
@@ -40,7 +40,7 @@ function App({ products }) {
 			</AtomicoStoreHeader>
 			<Router>
 				<Products
-					path="/"
+					path={location}
 					products={products}
 					addCart={data => {
 						dispatch({
@@ -50,7 +50,7 @@ function App({ products }) {
 					}}
 				/>
 				<Cart
-					path="/cart"
+					path={`${location}/cart`}
 					products={cart}
 					remCart={data => {
 						dispatch({
@@ -61,14 +61,6 @@ function App({ products }) {
 				/>
 			</Router>
 		</host>
-	);
-}
-
-function AtomicoStore({ products, location }) {
-	return (
-		<Root path={location}>
-			<App products={products} />
-		</Root>
 	);
 }
 
