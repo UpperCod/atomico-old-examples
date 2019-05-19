@@ -10,16 +10,17 @@ This configuration assumes that the developer works with a modern browser, compa
 
 ```bash
 # development mode
-npm run dev 
+npm run dev
 # production mode
 npm run build
 ```
 
-## Directory 
+## Directory
+
 ```bash
-/src 
+/src
   index.js #entry code
-/test 
+/test
 /public #single-app
   /dist #this directory is removed with each rollup cycle
   /img
@@ -39,7 +40,7 @@ By default, rollup loads the initial configuration from package.json:
 }
 ```
 
-## support 
+## support
 
 ### CSS
 
@@ -54,14 +55,23 @@ import css from "style.css";
 
 ### JS Y TS
 
-supported by [rollup-plugin-sucrase] (https://github.com/rollup/rollup-plugin-sucrase), this library allows manipulation of non-standardized JS and TS code.
+supported by [rollup-plugin-sucrase](https://github.com/rollup/rollup-plugin-sucrase), this library allows manipulation of non-standardized JS and TS code.
 
+### pwa
 
+The given configuration is intended for the development of single apps pwa, you should only uncomment in index
+the next line, to enable the server worker.
+
+```html
+<!--Delete comment to activate PWA
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+</script>
+-->
+```
 
 ## test
 
-The test stack is based on [karma](https://karma-runner.github.io/latest/index.html), [jasmine](https://jasmine.github.io/) and chrome, check the `/test ` folder this has a small example of use
-
-
-
-
+The test stack is based on [karma](https://karma-runner.github.io/latest/index.html), [jasmine](https://jasmine.github.io/) and chrome, check the `/test` folder this has a small example of use

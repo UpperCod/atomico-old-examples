@@ -5,13 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>atomico-store</title>
-		<meta name="description" content="sample atomico"> 
+		<meta name="description" content="example"> 
 		<link rel='manifest' href='manifest.json'>
 		<link rel="icon" type="image/png" sizes="128x128" href="img/icons/icon-128x128.png">
 		<link rel="icon" type="image/png" sizes="512x512" href="img/icons/icon-512x512.png">
 		<meta name="theme-color" content="#232329">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="apple-mobile-web-app-capable" content="no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-title" content="atomico-store">
 		<link rel="apple-touch-icon" href="img/icons/icon-128x128.png">
 		<style>
@@ -25,14 +25,14 @@
 		</style>
 	</head>
 	<body>
-		<atomico-store 
-			location="/examples/atomico-store/public/"
-			products='[{"id":"p1","title":"Gaming Mouse","price":29.99},{"id":"p2","title":"Harry Potter 3","price":9.99},{"id":"p3","title":"Used plastic bottle","price":0.99},{"id":"p4","title":"Half-dried plant","price":2.99}]'></atomico-store>	
+		<wc-emoji show></wc-emoji>
 		<script type="module" src="dist/index.js"></script>
+		<!--Delete comment to activate PWA
 		<script>
 			if ("serviceWorker" in navigator) {
 				navigator.serviceWorker.register("sw.js");
 			}
 		</script>
+		-->
 	</body>
 </html>
