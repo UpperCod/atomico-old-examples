@@ -1,28 +1,25 @@
 import { useReducer } from "@atomico/core";
-import { Router, useRedirect, useRoute, Root } from "@atomico/router";
+import { Router, useRedirect, useRoute } from "@atomico/router";
 import { h, customElement } from "@atomico/element";
+
 import { reducer, Actions } from "./reducer.js";
-import AtomicoStoreHeader from "./components/atomico-store-header";
-import AtomicoStoreButton from "./components/atomico-store-button";
+import AtomicoStoreHeader from "./web-components/atomico-store-header";
+import AtomicoStoreButton from "./web-components/atomico-store-button";
+
 import Products from "./pages/products";
 import Cart from "./pages/cart";
 
-function AtomicoStore({ products, location }) {
+import style from "./style.css";
+
+function AtomicoStore({ products, location = "/" }) {
 	let [cart, dispatch] = useReducer(reducer, []);
 	let redirect = useRedirect();
 	let [inRoute, params] = useRoute(`${location}/:page/:any...`);
+
+	console.log(products);
 	return (
 		<host shadowDom>
-			<style>
-				{`
-						:host {
-							width: 100%;
-							height: 100%;
-							display: block;
-							background: #f9fafc;
-						}
-					`}
-			</style>
+			<style>{style}</style>
 			<AtomicoStoreHeader>
 				<AtomicoStoreButton
 					onClick={() => redirect(location)}
@@ -32,29 +29,30 @@ function AtomicoStore({ products, location }) {
 				</AtomicoStoreButton>
 				<AtomicoStoreButton
 					counter={cart.reduce((total, { count }) => total + count, 0)}
-					onClick={() => redirect(`${location}/cart`)}
+					onClick={() => redirect(`${location}cart`)}
 					checked={params.page == "cart"}
 				>
 					Cart
 				</AtomicoStoreButton>
 			</AtomicoStoreHeader>
 			<Router>
-				<Products
-					path={location}
-					products={products}
-					addCart={data => {
-						dispatch({
-							type: Actions.ADD_CART,
-							data
-						});
-					}}
-				/>
 				<Cart
 					path={`${location}/cart`}
 					products={cart}
 					remCart={data => {
 						dispatch({
 							type: Actions.REM_CART,
+							data
+						});
+					}}
+				/>
+				<Products
+					default
+					products={products}
+					addCart={data => {
+						console.log(dispatch);
+						dispatch({
+							type: Actions.ADD_CART,
 							data
 						});
 					}}
