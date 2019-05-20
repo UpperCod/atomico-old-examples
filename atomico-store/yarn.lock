@@ -20,10 +20,10 @@
     "@atomico/base-element" "^0.2.x"
     htm "^2.1.1"
 
-"@atomico/lazy@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@atomico/lazy/-/lazy-0.0.0.tgz#19223fcfdf968145264c37a4c4edeedaba313685"
-  integrity sha512-qAv2pMiFehXgMMJCwrn0Dc1fyvwrbvKzea6v9t573CjyWQA8xbsWxDkCK2QTahHhgmQIveUmg3/NLqTtXbC4sQ==
+"@atomico/lazy@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@atomico/lazy/-/lazy-0.1.0.tgz#873392d2818744bae5a983dfffe0e3fa47d47703"
+  integrity sha512-vVtbUDSHFnL5IhL23FKtNJnOZgx/Bo8IqGuq3QN9uxf85vamBw2+NaBGyt2dFlqKABwoVGOiA+f3VGXJSB8VfQ==
 
 "@atomico/rollup-plugin-import-css@^1.0.3":
   version "1.0.3"

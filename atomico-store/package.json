@@ -13,7 +13,7 @@
 	"dependencies": {
 		"@atomico/core": "^1.5.2",
 		"@atomico/element": "^0.6.x",
-		"@atomico/lazy": "^0.0.0",
+		"@atomico/lazy": "^0.1.0",
 		"@atomico/router": "^0.3.0"
 	},
 	"devDependencies": {

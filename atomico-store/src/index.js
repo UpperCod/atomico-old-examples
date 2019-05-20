@@ -1,22 +1,22 @@
 import { useReducer } from "@atomico/core";
 import { Router, useRedirect, useRoute } from "@atomico/router";
 import { h, customElement } from "@atomico/element";
+import { lazy } from "@atomico/lazy";
 
 import { reducer, Actions } from "./reducer.js";
 import AtomicoStoreHeader from "./web-components/atomico-store-header";
 import AtomicoStoreButton from "./web-components/atomico-store-button";
 
-import Products from "./pages/products";
-import Cart from "./pages/cart";
-
 import style from "./style.css";
+
+let Products = lazy(() => import("./pages/products"));
+let Cart = lazy(() => import("./pages/cart"));
 
 function AtomicoStore({ products, location = "/" }) {
 	let [cart, dispatch] = useReducer(reducer, []);
 	let redirect = useRedirect();
 	let [inRoute, params] = useRoute(`${location}/:page/:any...`);
 
-	console.log(products);
 	return (
 		<host shadowDom>
 			<style>{style}</style>
@@ -38,6 +38,7 @@ function AtomicoStore({ products, location = "/" }) {
 			<Router>
 				<Cart
 					path={`${location}/cart`}
+					loading="...loading!"
 					products={cart}
 					remCart={data => {
 						dispatch({
@@ -48,6 +49,7 @@ function AtomicoStore({ products, location = "/" }) {
 				/>
 				<Products
 					default
+					loading="...loading!"
 					products={products}
 					addCart={data => {
 						console.log(dispatch);
