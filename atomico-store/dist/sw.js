@@ -27,27 +27,27 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "509f645285e814a88a70193839224758"
+    "revision": "10e59db8d70d7fa24d62b2c18ab74759"
   },
   {
-    "url": "dist/cart-04aba04e.js",
-    "revision": "ed7cac7a21b7420df39bbdb4e92439d8"
+    "url": "chunk-2760dca5.js",
+    "revision": "e6086c8650479909032edae99baab8c3"
   },
   {
-    "url": "dist/chunk-863279da.js",
-    "revision": "434c2ffedc8f4b7f9aff9c2a7e25f9be"
+    "url": "chunk-fc5b03b8.js",
+    "revision": "322f9661eb8b94eacbc7f5f41f58eda7"
   },
   {
-    "url": "dist/chunk-edfac312.js",
-    "revision": "b6ec353db94ca84c6a5f26e927446ca6"
+    "url": "index-912d319a.js",
+    "revision": "3c854beb3a501bd30ee34c138ad43f8c"
   },
   {
-    "url": "dist/index.js",
-    "revision": "fbf8bb4603885a6b883473b9bc6eb430"
+    "url": "index-bb6a7eb9.js",
+    "revision": "833470f5f74e80ba3b0aa2c506bf731c"
   },
   {
-    "url": "dist/products-03654883.js",
-    "revision": "e5b5cddf9d52fb3f9f19a0a3425c7b96"
+    "url": "index.js",
+    "revision": "e38d8b90aace4055d473301aba257564"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

@@ -1,7 +1,6 @@
-import { useReducer } from "@atomico/core";
-import { Router, useRedirect, useRoute } from "@atomico/router";
-import { h, customElement } from "@atomico/element";
-import { lazy } from "@atomico/lazy";
+import { h, customElement, useReducer } from "atomico";
+import { Router, useRedirect, useRoute } from "atomico/router";
+import { lazy } from "atomico/lazy";
 
 import { reducer, Actions } from "./reducer.js";
 import AtomicoStoreHeader from "./web-components/atomico-store-header";
@@ -9,7 +8,7 @@ import AtomicoStoreButton from "./web-components/atomico-store-button";
 
 import style from "./style.css";
 
-let Products = lazy(() => import("./pages/products"));
+let Products = lazy(() => import("./pages/product"));
 let Cart = lazy(() => import("./pages/cart"));
 
 function AtomicoStore({ products, location = "/" }) {

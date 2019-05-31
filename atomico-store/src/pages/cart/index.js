@@ -1,6 +1,6 @@
-import { h } from "@atomico/core";
-import AtomicoStoreButton from "../web-components/atomico-store-button";
-import AtomicoStoreCart from "../web-components/atomico-store-card";
+import { h } from "atomico";
+import AtomicoStoreButton from "../../web-components/atomico-store-button";
+import AtomicoStoreCart from "../../web-components/atomico-store-card";
 
 export default function({ products, remCart }) {
 	return (

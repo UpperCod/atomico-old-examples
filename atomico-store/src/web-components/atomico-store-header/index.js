@@ -1,4 +1,4 @@
-import { h, customElement } from "@atomico/element";
+import { h, customElement } from "atomico";
 import style from "./style.css";
 function Header() {
 	return (

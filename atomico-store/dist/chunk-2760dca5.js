@@ -1,0 +1,2 @@
+import{g as e,e as o}from"./chunk-fc5b03b8.js";var r=":host{flex:0%;padding:1rem;box-sizing:border-box;margin:1rem;background:#fff;border-radius:5px;box-shadow:0 6px 12px rgba(0,0,0,.05);display:flex;align-items:center;justify-content:space-between;font-size:14px}";function t({labelButton:e}){return o("host",{shadowDom:!0},o("style",null,r),o("slot",null))}t.observables={labelButton:String};var a=e("atomico-store-card",t);export{a};
+//# sourceMappingURL=chunk-2760dca5.js.map

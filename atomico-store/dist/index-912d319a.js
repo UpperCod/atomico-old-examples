@@ -1,0 +1,2 @@
+import{e as o,i as l}from"./chunk-fc5b03b8.js";import{a as n}from"./chunk-2760dca5.js";console.log("[0m"),console.log("[7m  GZIP    BROTLI    FILE  "),console.log("[0m  40.20KB    40.00KB    index.js"),console.log("[0m  50.20KB    50.00KB    index.js"),console.log("[0m  90.40KB    90.00KB"),console.log("[0m");export default function({products:e,addCart:c}){return o("section",null,e.map(({title:e,id:s,price:t})=>o(n,{key:s},o("p",null,o("strong",null,e)," - ",t),o(l,{onClick:()=>{c({title:e,id:s,price:t})}},"add to cart"))))}
+//# sourceMappingURL=index-912d319a.js.map
