@@ -202,9 +202,9 @@ atob@^2.1.1:
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
 atomico@>=0.8:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/atomico/-/atomico-0.8.0.tgz#4739408873ef0c7496e5ed5c94351ed6855eb95d"
-  integrity sha512-naeRkrYyrEKWEbCQc4Ml82Dmbun3Yvsvre9RKmYS7sNpRRUpPqNQydcqG2pH2adiWDdYLWGfcCDWE/zuM/8q3g==
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/atomico/-/atomico-0.8.1.tgz#a9520a202acfe9fc4a3797337b76c363fbe35a65"
+  integrity sha512-D8M6dsx3equ5o7oP6RsAiJczuIrWzAiU8nXxVlk+8qNvtibXPo7rwd7ZVRD3uv/zVwHK+mVpQoPkyHTjLgkVIw==
 
 babel-extract-comments@^1.0.0:
   version "1.0.0"
