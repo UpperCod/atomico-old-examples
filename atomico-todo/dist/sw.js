@@ -27,10 +27,10 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "cdd20729885be290328445c801011f53"
+    "revision": "019dcaafc0251e750f056a0fe1bf053d"
   },
   {
-    "url": "dist/index.js",
+    "url": "index.js",
     "revision": "1ec4fae52b7ec138256af85fb7b84538"
   }
 ].concat(self.__precacheManifest || []);
