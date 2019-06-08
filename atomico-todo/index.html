@@ -4,16 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>atomico-todo</title>
-		<meta name="description" content="todo"> 
-		<link rel='manifest' href='manifest.json'>
-		<link rel="icon" type="image/png" sizes="128x128" href="img/icons/icon-128x128.png">
-		<link rel="icon" type="image/png" sizes="512x512" href="img/icons/icon-512x512.png">
-		<meta name="theme-color" content="#232329">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-title" content="atomico-todo">
-		<link rel="apple-touch-icon" href="img/icons/icon-128x128.png">
+		<title></title>
+		<meta name="description" content="" />
+		<link rel="manifest" href="manifest.json" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="128x128"
+			href="img/icons/icon-128x128.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="img/icons/icon-512x512.png"
+		/>
+		<meta name="theme-color" content="#232329" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="folder" />
+		<link rel="apple-touch-icon" href="img/icons/icon-128x128.png" />
 		<style>
 			html,
 			body {
@@ -48,16 +61,18 @@
 				margin: 50px 0px;
 			}
 		</style>
-
 	</head>
 	<body>
 		<h1>Todo</h1>
-		<atomico-todo task='[{"text":"my initial todo","checked":false,"id":1},{"text":"Learn about Web Components","checked":true,"id":2}]'></atomico-todo>
-		<script type="module" src="dist/index.js"></script>
+		<atomico-todo
+			task='[{"text":"my initial todo","checked":false,"id":1},{"text":"Learn about Web Components","checked":true,"id":2}]'
+		></atomico-todo>
+		<script type="module" src="./src/index.js"></script>
+		<!--Delete comment to activate PWA
 		<script>
 			if ("serviceWorker" in navigator) {
 				navigator.serviceWorker.register("sw.js");
 			}
 		</script>
-	</body>
+		--></body>
 </html>

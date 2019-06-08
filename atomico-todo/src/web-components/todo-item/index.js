@@ -1,6 +1,5 @@
-import { h, customElement } from "@atomico/element";
+import { h, customElement } from "atomico";
 import style from "./style.css";
-import { useEffect } from "@atomico/core";
 /**
  * Component article, shows the task and allows you to mark how the
  * elimination(props.handlerRemove) of this has been done(props.handlerToggle) or eliminated

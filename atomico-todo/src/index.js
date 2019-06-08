@@ -1,5 +1,4 @@
-import { useState } from "@atomico/core";
-import { h, customElement } from "@atomico/element";
+import { h, customElement, useState } from "atomico";
 
 import TodoInput from "./web-components/todo-input";
 import TodoItem from "./web-components/todo-item";
