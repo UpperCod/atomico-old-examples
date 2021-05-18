@@ -19,7 +19,7 @@
 		"@atomico/rollup-plugin-workbox": "^0.0.1",
 		"rollup": "^1.7.4",
 		"rollup-plugin-node-resolve": "^4.0.1",
-		"rollup-plugin-serve": "^1.0.1",
+		"rollup-plugin-serve": "^1.0.2",
 		"rollup-plugin-sucrase": "^2.1.0",
 		"rollup-plugin-terser": "^4.0.4"
 	}
